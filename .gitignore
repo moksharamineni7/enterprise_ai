@@ -1,0 +1,102 @@
+# ==============================================================================
+# NEXUSFLOW AI — GITIGNORE CONFIGURATION
+# Production-grade exclusion rules for Node.js, TypeScript, Vite, Supabase & OS
+# ==============================================================================
+
+# 1. Environment & Sensitive Credentials (CRITICAL - NEVER COMMIT)
+.env
+.env.*
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+
+# Explicitly allow the safe template file
+!.env.example
+
+# 2. Dependency Directories
+node_modules/
+*/node_modules/
+.pnpm-store/
+.yarn/
+.yarn-cache/
+
+# 3. Build Outputs & Compilations
+dist/
+build/
+out/
+.output/
+backend/dist/
+frontend/dist/
+*.tsbuildinfo
+
+# 4. Vite & Bundler Caches
+.vite/
+frontend/.vite/
+.cache/
+.parcel-cache/
+.turbo/
+
+# 5. Logs & Debug Dumps
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 6. Testing, Code Coverage & Reports
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+.vitest/
+
+# 7. IDE, Editor & OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swo
+*.swp
+.fleet/
+.cursor/
+
+# 8. Temporary Files & Local Storage
+uploads/
+backend/uploads/
+temp/
+tmp/
+scratch/
+*.tmp
+*.bak
+
+# 9. Supabase Local CLI & Runtime Data
+.supabase/
+supabase/.temp/
+supabase/.branches/

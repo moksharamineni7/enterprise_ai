@@ -1,0 +1,32 @@
+{
+  "name": "nexusflow-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NexusFlow AI - Intelligent Enterprise Operations Platform",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspaces",
+    "build:backend": "npm run build --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "db:check": "npm run db:check --workspace=backend"
+  },
+  "keywords": [
+    "enterprise",
+    "ai",
+    "operations",
+    "gemini",
+    "supabase",
+    "workflow"
+  ],
+  "author": "NexusFlow Engineering Team",
+  "license": "UNLICENSED"
+}
