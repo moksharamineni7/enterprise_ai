@@ -1,8 +1,11 @@
 const getBaseUrl = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL.replace(/\/$/, '');
+  }
   if (typeof window !== 'undefined' && window.location?.origin && window.location.origin !== 'null') {
     return `${window.location.origin}/api/v1`;
   }
-  return 'http://localhost:3000/api/v1';
+  return 'https://enterprise-ai-1.onrender.com/api/v1';
 };
 
 export class ApiError extends Error {
